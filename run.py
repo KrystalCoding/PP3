@@ -1,76 +1,41 @@
-import gspread
-from google.oauth2.service_account import Credentials
+import random
 
-SCOPE = [
-    "https://www.googleapis.com/auth/spreadsheets",
-    "https://www.googleapis.com/auth/drive.file",
-    "https://www.googleapis.com/auth/drive"
-    ]
-CREDS = Credentials.from_service_account_file('creds.json')
+# Define a list of questions and answers
+questions = [
+    {
+        "question": "What is the scientific name for the common sunflower?",
+        "answers": ["Helianthus annuus", "Rosa canina", "Cucurbita pepo", "Lilium auratum"],
+        "correct_answer": "Helianthus annuus"
+    },
+    {
+        "question": "What is the most widely cultivated fruit in the world?",
+        "answers": ["Banana", "Apple", "Mango", "Orange"],
+        "correct_answer": "Banana"
+    },
+    {
+        "question": "What type of plant is poison ivy?",
+        "answers": ["Vine", "Shrub", "Tree", "Grass"],
+        "correct_answer": "Vine"
+    },
+    # Add more questions here...
+]
 
-SCOPED_CREDS = CREDS.with_scopes(SCOPE)
-GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
-SHEET = GSPREAD_CLIENT.open('love_sandwiches')
+# Define a function to run the game
+def run_game():
+    random.shuffle(questions)  # Shuffle the questions
+    score = 0  # Initialize the score
+    for i, question in enumerate(questions):
+        print(f"Question {i+1}: {question['question']}")
+        for j, answer in enumerate(question['answers']):
+            print(f"{j+1}. {answer}")
+        player_answer = input("Enter your answer (1-4): ")
+        if player_answer == str(question['answers'].index(question['correct_answer'])+1):
+            print("Correct!")
+            score += 1
+        else:
+            print(f"Incorrect. The correct answer is {question['correct_answer']}.")
+        print()  # Print a blank line for formatting
+    print(f"Game over. Your score is {score}/{len(questions)}.")
 
-"""
-CONNECTS FILE TO GOOGLE SHEET
-sales = SHEET.worksheet('sales')
-
-data = sales.get_all_values()
-
-print(data)
-
-Below: gets data from user only from within this terminal:
-"""
-def get_sales_data():
-    """
-    Get sales figures input from the user.
-    Run a while loop to collect a valid string of data from the user
-    via the terminal, which must be a string of 6 numbers separated
-    by commas. The loop will repeadedly request data, until it is valid.
-    """
-    while True:
-        print('Please enter sales data from the last market.')
-        print('Data should be six numbers, separated by commas.')
-        print('Example: 10, 20, 30, 40, 50, 60\n')
-
-        data_str = input('Enter your data here:')
-
-        sales_data = data_str.split(',')
-
-        if validate_data(sales_data):
-            print('Data is valid!')
-            break
-
-    return sales_data        
-
-def validate_data(values):
-    """
-    Inside the try, converts all string values to integers.
-    Raises ValueError if strings cannot be converted into int,
-    or if there aren't any values.
-    """
-    try:
-        [int(value) for value in values]
-        if len(values) != 6:
-            raise ValueError(
-                f'Exactly 6 values required, you provided {len(values)}'
-            )
-    except ValueError as e:
-        print(f'Invalid data: {e}, please try again.\n')        
-        return False
-
-    return True
-
-def update_sales_worksheet(data):
-    """
-    Update sales worksheet, add new row with the list data provided.
-    """
-    print('Updating sales worksheet...\n')
-    sales_worksheet = SHEET.worksheet('sales')
-    sales_worksheet.append_row(data)
-    print('Sales worksheet updated successfully.\n')
-
-data = get_sales_data()
-sales_data = [int(num) for num in data]
-update_sales_worksheet(sales_data)
+# Run the game
+run_game()
