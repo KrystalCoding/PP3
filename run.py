@@ -62,11 +62,11 @@ questions = [
         "answers": ["Abcission", "Transpiration", "Photosynthesis", "Respiration"],
         "correct_answer": "Abcission"
     },
-    {
-        "question": "What is the name of the chemical compound responsible for giving plants their green color?",
-        "answers": ["Chlorophyll", "Carotenoid", "Anthocyanin", "Chloroform"],
-        "correct_answer": "Chlorophyll"
-    }    
+    # {
+    #     "question": "What is the name of the chemical compound responsible for giving plants their green color?",
+    #     "answers": ["Chlorophyll", "Carotenoid", "Anthocyanin", "Chloroform"],
+    #     "correct_answer": "Chlorophyll"
+    # }    
 ]
 
 # Defines the function to run the game
