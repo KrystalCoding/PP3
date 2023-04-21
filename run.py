@@ -65,7 +65,7 @@ questions = [
     {
         "question": "What is the name of the chemical compound responsible for giving plants their green color?",
         "answers": ["Chlorophyll", "Carotenoid", "Anthocyanin", "Chloroform"],
-        "corect_answer": "Chlorophyll"
+        "correct_answer": "Chlorophyll"
     }    
 ]
 
