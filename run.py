@@ -69,6 +69,25 @@ questions = [
     }    
 ]
 
+
+#Gets and saves user name
+def player_info():
+   global player_info
+   console.print(
+       "Please enter your preferred username:\n",
+       justify="center",
+   )
+   player_name = input()
+   welcome()
+
+
+# Welcome message
+def welcome():
+   console.print(f"Hello, {player_name}! Welcome to the Plant Quiz.
+   Press Enter to test your plant knowledge with 13 questions:")
+
+
+
 # Defines the function to run the game
 def run_game():
     random.shuffle(questions)  # Shuffle the questions
