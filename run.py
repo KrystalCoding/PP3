@@ -4,12 +4,12 @@ import random
 questions = [
     {
         "question": "What is the scientific name for the common sunflower?",
-        "answers": ["Helianthus annuus", "Rosa rubiginosa", "Cucurbita pepo", "Lilium auratum"],
+        "answers": ["Rosa rubiginosa", "Cucurbita pepo", "Helianthus annuus", "Lilium auratum"],
         "correct_answer": "Helianthus annuus"
     },
     {
         "question": "What is the most widely cultivated fruit in the world?",
-        "answers": ["Banana", "Apple", "Mango", "Orange"],
+        "answers": ["Apple", "Banana", "Mango", "Orange"],
         "correct_answer": "Banana"
     },
     {
@@ -19,17 +19,17 @@ questions = [
     },
     {
         "question": "What is the process called by which plants convert light into energy?",
-        "answers": ["Photosynthesis", "Respiration", "Transpiration", "Fertilization"],
+        "answers": ["Respiration", "Transpiration", "Fertilization", "Photosynthesis"],
         "correct_answer": "Photosynthesis"
     },
     {
         "question": "What is the largest flower in the world?",
-        "answers": ["Rafflesia arnoldii", "Titan arum", "Corpse flower", "Hydrangea macrophylla"],
+        "answers": ["Titan arum", "Corpse flower", "Rafflesia arnoldii", "Hydrangea macrophylla"],
         "correct_answer": "Rafflesia arnoldii"
     },
     {
         "question": "What is the most common element found in all living organisms?",
-        "answers": ["Carbon", "Oxygen", "Nitrogen", "Hydrogen"],
+        "answers": ["Oxygen", "Carbon", "Nitrogen", "Hydrogen"],
         "correct_answer": "Carbon"
     },
     {
@@ -44,29 +44,29 @@ questions = [
     },
     {
         "question": "What is the national flower of Japan?",
-        "answers": ["Cherry blossom", "Lotus", "Rose", "Tulip"],
+        "answers": ["Lotus", "Rose", "Cherry blossom", "Tulip"],
         "correct_answer": "Cherry blossom"
     },
     {
         "question": "What is the name of the plant tissue that transports water and nutrients from the roots to the rest of the plant?",
-        "answers": ["Xylem", "Phloem", "Cambium", "Epidermis"],
+        "answers": ["Phloem", "Xylem", "Cambium", "Epidermis"],
         "correct_answer": "Xylem"
     },
     {
         "question": "What is the name of the process by which plants bend or grow towards a light source?",
-        "answers": ["Phototropism", "Gravitropism", "Hydrotropism", "Thigmotropism"],
+        "answers": ["Gravitropism", "Hydrotropism", "Thigmotropism", "Phototropism"],
         "correct_answer": "Phototropism"
     },
     {
         "question": "What is the name of the process by which plants shed their leaves?",
-        "answers": ["Abcission", "Transpiration", "Photosynthesis", "Respiration"],
+        "answers": ["Transpiration", "Abcission", "Photosynthesis", "Respiration"],
         "correct_answer": "Abcission"
     },
-    # {
-    #     "question": "What is the name of the chemical compound responsible for giving plants their green color?",
-    #     "answers": ["Chlorophyll", "Carotenoid", "Anthocyanin", "Chloroform"],
-    #     "correct_answer": "Chlorophyll"
-    # }    
+    {
+        "question": "What is the name of the chemical compound responsible for giving plants their green color?",
+        "answers": ["Chlorophyll", "Carotenoid", "Anthocyanin", "Chloroform"],
+        "correct_answer": "Chlorophyll"
+    }    
 ]
 
 # Defines the function to run the game
