@@ -78,7 +78,7 @@ def player_info():
     return player_name
 
 # Welcome message
-def welcome():
+def welcome(player_name):
     print(f"Hello, {player_name}! Welcome to the Plant Quiz.\n")
     input("Press Enter to test your plant knowledge with 13 questions:")
 
