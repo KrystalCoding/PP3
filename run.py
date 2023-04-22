@@ -74,7 +74,7 @@ questions = [
 def player_info():
     print("Please enter your preferred username:\n")
     player_name = input()
-    print()
+    print()# Print a blank line for formatting
     welcome(player_name)
     return player_name
 
@@ -92,7 +92,11 @@ def run_game():
         print(f"Question {i+1}: {question['question']}")
         for j, answer in enumerate(question['answers']):
             print(f"{j+1}. {answer}")
-        player_answer = input("Enter your answer (1-4): ")
+            while True:
+                player_answer = input("Enter your answer (1-4): ")
+                if player_answer.isdigit() and int(player_answer) in [1,2,3,4]:
+                    break
+                print("Invalid input. Please enter a number between 1 and 4.")
         if player_answer == str(question['answers'].index(question['correct_answer'])+1):
             print("Correct!")
             score += 1
@@ -100,6 +104,7 @@ def run_game():
             print(f"Incorrect. The correct answer is {question['correct_answer']}.")
         print()  # Print a blank line for formatting
     print(f"Game over. Your score is {score}/{len(questions)}.")
+    print() # Print a blank line for formatting
     print("Click 'Run Program' or Refresh the page to play again!")
 
 #Get player name
