@@ -83,9 +83,9 @@ def player_info():
 
 # Welcome message
 def welcome():
-   console.print(f"Hello, {player_name}! Welcome to the Plant Quiz.
-   Press Enter to test your plant knowledge with 13 questions:")
-
+   console.print(f"Hello, {player_name}! Welcome to the Plant Quiz.\n")
+   console.print("Press Enter to test your plant knowledge with 13 questions:")
+   input()
 
 
 # Defines the function to run the game
