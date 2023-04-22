@@ -74,13 +74,15 @@ questions = [
 def player_info():
     print("Please enter your preferred username:\n")
     player_name = input()
+    print()
     welcome(player_name)
     return player_name
 
 # Welcome message
 def welcome(player_name):
     print(f"Hello, {player_name}! Welcome to the Plant Quiz.\n")
-    input("Press Enter to test your plant knowledge with 13 questions:")
+    print("Press Enter to test your plant knowledge with 13 questions:\n")
+    input()
 
 # Defines the function to run the game
 def run_game():
@@ -98,7 +100,7 @@ def run_game():
             print(f"Incorrect. The correct answer is {question['correct_answer']}.")
         print()  # Print a blank line for formatting
     print(f"Game over. Your score is {score}/{len(questions)}.")
-
+    print("Click 'Run Program' or Refresh the page to play again!")
 
 #Get player name
 player_name = player_info()
