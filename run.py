@@ -72,21 +72,15 @@ questions = [
 
 #Gets and saves user name
 def player_info():
-   global player_info
-   console.print(
-       "Please enter your preferred username:\n",
-       justify="center",
-   )
-   player_name = input()
-   welcome()
-
+    print("Please enter your preferred username:\n")
+    player_name = input()
+    welcome(player_name)
+    return player_name
 
 # Welcome message
 def welcome():
-   console.print(f"Hello, {player_name}! Welcome to the Plant Quiz.\n")
-   console.print("Press Enter to test your plant knowledge with 13 questions:")
-   input()
-
+    print(f"Hello, {player_name}! Welcome to the Plant Quiz.\n")
+    input("Press Enter to test your plant knowledge with 13 questions:")
 
 # Defines the function to run the game
 def run_game():
@@ -104,6 +98,10 @@ def run_game():
             print(f"Incorrect. The correct answer is {question['correct_answer']}.")
         print()  # Print a blank line for formatting
     print(f"Game over. Your score is {score}/{len(questions)}.")
+
+
+#Get player name
+player_name = player_info()
 
 # Run the game
 run_game()
