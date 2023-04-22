@@ -92,11 +92,11 @@ def run_game():
         print(f"Question {i+1}: {question['question']}")
         for j, answer in enumerate(question['answers']):
             print(f"{j+1}. {answer}")
-            while True:
-                player_answer = input("Enter your answer (1-4): ")
-                if player_answer.isdigit() and int(player_answer) in [1,2,3,4]:
-                    break
-                print("Invalid input. Please enter a number between 1 and 4.")
+        while True:
+            player_answer = input("Enter your answer (1-4): ")
+            if player_answer.isdigit() and int(player_answer) in [1,2,3,4]:
+                break
+            print("Invalid input. Please enter a number between 1 and 4.")
         if player_answer == str(question['answers'].index(question['correct_answer'])+1):
             print("Correct!")
             score += 1
