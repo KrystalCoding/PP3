@@ -119,9 +119,9 @@ def run_game():
         else:
             print(f"Incorrect. The correct answer is {question['correct_answer']}.")
         print()  # Print a blank line for formatting
-    print(f"Game over. Your score is {score}/{len(questions)}.")
         if score == 13:
             print(f"Congratulations, {player_name}! You are a plant Master!")
+    print(f"Game over. Your score is {score}/{len(questions)}.")
     print() # Print a blank line for formatting
     print("Click 'Run Program' or Refresh the page to play again!")
 

@@ -114,13 +114,9 @@ The game code contains functions both to score the right and wrong answers at th
 
  * Only a total of correct answers are tallied and compared to the total number of questions.
 
- * If a player get all 13 answers correct they presented with a 'CONGRATULATIONS (Players Name) YOU ARE A RIDDLE MASTER' message.
+ * If a player get all 13 answers correct they presented with a unique message: "Congratulations, {player_name}! You are a plant Master!"
 
-![Top Score](documents/readme-images/top-score.png)
- 
- * Then the user will be prompted with [To Save Your Score](#10---saving-scores)* or [See Saved Scores](#4---saved-score-viewing).
-
-    *(only displays when player provides a name, is shown before 'See Saved Scores'  if name is provided).
+! [Top Score]()
 
 ### _9 - Play Again_
 
