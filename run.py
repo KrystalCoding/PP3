@@ -1,6 +1,5 @@
 import random
 import textwrap
-lines = textwrap.wrap(text, width, break_long_words=False)
 
 # The list of questions and answers in the quiz game
 questions = [
