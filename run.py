@@ -97,9 +97,17 @@ def run_game():
     random.shuffle(questions)  # Shuffle the questions
     score = 0  # Initialize the score
     for i, question in enumerate(questions):
-        print(f"Question {i + 1}: {question['question']}")
+        # Wrap the question text to a maximum width of 80 characters
+        wrapped_question = textwrap.wrap(question['question'], width=80)
+        # Print each line of the wrapped question
+        for line in wrapped_question:
+            print(line)
         for j, answer in enumerate(question['answers']):
-            print(f"{j + 1}. {answer}")
+            # Wrap each answer text to a maximum width of 80 characters
+            wrapped_answer = textwrap.wrap(answer, width=80)
+            # Print each line of the wrapped answer
+            for line in wrapped_answer:
+                print(f"{j + 1}. {line}")
         while True:
             player_answer = input("Enter your answer (1-4): ")
             if player_answer.isdigit() and int(player_answer) in [1,2,3,4]:
@@ -114,6 +122,7 @@ def run_game():
     print(f"Game over. Your score is {score}/{len(questions)}.")
     print() # Print a blank line for formatting
     print("Click 'Run Program' or Refresh the page to play again!")
+
 
 #Get player name
 player_name = player_info()
