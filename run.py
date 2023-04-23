@@ -69,29 +69,36 @@ questions = [
     }    
 ]
 
-
-#Gets and saves user name
 def player_info():
+    """
+    Prompts the user to enter their preferred username and returns it as a string.
+    """
     print("Please enter your preferred username:\n")
     player_name = input()
-    print()# Print a blank line for formatting
+    print()  # Print a blank line for formatting
     welcome(player_name)
     return player_name
 
-# Welcome message
 def welcome(player_name):
+    """
+    Prints a welcome message to the user.
+    """
     print(f"Hello, {player_name}! Welcome to the Plant Quiz.\n")
     print("Press Enter to test your plant knowledge with 13 questions:\n")
     input()
 
-# Defines the function to run the game
 def run_game():
+    """
+    Runs the Plant Quiz game.
+    This function shuffles the questions, initializes the score, asks the user to answer each question, and updates the
+    score based on the user's answers. After all questions are answered, the user's score is displayed.
+    """
     random.shuffle(questions)  # Shuffle the questions
     score = 0  # Initialize the score
     for i, question in enumerate(questions):
-        print(f"Question {i+1}: {question['question']}")
+        print(f"Question {i + 1}: {question['question']}")
         for j, answer in enumerate(question['answers']):
-            print(f"{j+1}. {answer}")
+            print(f"{j + 1}. {answer}")
         while True:
             player_answer = input("Enter your answer (1-4): ")
             if player_answer.isdigit() and int(player_answer) in [1,2,3,4]:
