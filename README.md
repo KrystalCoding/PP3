@@ -16,18 +16,15 @@ The game code contains functions both to score the right and wrong answers at th
 - [_Features_](#features)
   - [_How To Play_](#how-to-play)
   - [_Game Elements_](#game-elements)
-    - [\_1 - Welcome \_](#_1---welcome-_)
-    - [_2 - Player_](#2---player)
+    - [_1 - Player_](#_1---player)
+    - [_2 - Welcome_](#2---welcome)
     - [_3 - How To Play_](#3---how-to-play)
-    - [_4 - Saved Score Viewing_](#4---saved-score-viewing)
-    - [_5 - Displayed Riddles_](#5---displayed-riddles)
-    - [_6 - Correct Answer_](#6---correct-answer)
-    - [_7 - Incorrect Answer_](#7---incorrect-answer)
-    - [_8 - Invalid Entries_](#8---invalid-entries)
-    - [_9 - Final Score_](#9---final-score)
-    - [_10 - Saving Scores_](#10---saving-scores)
-    - [_11 - Play Again_](#11---play-again)
-    - [_12 - Game End_](#12---game-end)
+    - [_4 - Quiz Questions_](#5---quiz-questions)
+    - [_5 - Correct Answer_](#6---correct-answer)
+    - [_6 - Incorrect Answer_](#7---incorrect-answer)
+    - [_7 - Invalid Entries_](#8---invalid-entries)
+    - [_8 - Final Score_](#9---final-score)
+    - [_9 - Play Again_](#11---play-again)
   - [_Data Storage_](#data-storage)
   - [_Implemented Features_](#implemented-features)
   - [_Features to be Implemented_](#features-to-be-implemented)
@@ -47,129 +44,77 @@ The game code contains functions both to score the right and wrong answers at th
     
  * The player will be prompted to enter their desired username.
  
- * Skipping the name input will stop the user from saving there score.
+ * Skipping the name input is allowed. The line will simply be left blank.
  
- * The player can display scores that have been saved.
+ * This is a multiple choice quiz game which presents a question with four possible answers. The user is then prompted to select the correct choice from the options presented.
  
- * This is a multiple choice game prompting the player to select the corret answer for the riddles from a choice of 3 answers.
+ * The goal is for the user to guess as many correct answers as possible.
  
- * The idea of the game is to get as many correct as possible.
+ * At the end of the 13 randomized questions, the player's score is presented in a ?/13 format. 
  
- * The player will be able to save there score at the end of the game(if name has been entered)
- 
- * There is a play again prompt allowing the player to play again.
+ * Finally, there are instructions on how to play again.
 
 ## _Game Elements_
 
-### _1 - Welcome _
+### _1 - Player_
 
- * is a simple Welcome to riddles header
+ * The player is prompted to enter their desired username.
 
-![Welcome](documents/readme-images/welcome.png)
+! [Player]()
 
-### _2 - Player_
+### _2 - Welcome_
 
- * After the welcome header the player will be prompt to enter there mane or press enter to continue.
- 
- * This then take the player to the [How To Play](#3---how-to-play) section.
+ * After the player enters their prefered username, a short welcome message is displayed.
 
-![Player](documents/readme-images/player.png)
+! [Welcome]()
 
 ### _3 - How To Play_
 
- * This explains to the player How to play the game.
+ * This prompts the player to press Enter in order to try the quiz.
 
- * This is outputted as soon as the player has either entered ther name or pressed enter to skip.
+! [How To Play]()
 
- * The has a prompt saying 'Press Enter To Continue' and this will take the palyer to [See Saved Scores](#4---saved-score-viewing) prompt.
+### _4 - Quiz Questions_
 
-![How To Play](documents/readme-images/how-to.png)
+ * Then player is presented with the first randomized quiz question.
 
-### _4 - Saved Score Viewing_
+ * Immediately, along with the question, appear 4 possible answers. Only one is correct.
 
- * The player is prompt with asking to view the saved scores and asked to type 'Yes', 'Or Press Enter To Continue'. 
+ * Instructions to enter a number between 1-4 appear beneath the quiz question and answers. This allows the user to answer the quiz question via one of these digits: '1', '2', '3', or '4'.
 
- * Typing yes will Show the stored scores and display this table below.
+ * This loop is repeated until the 13th question is answered.
 
- * Pressing enter then the player is taken to the [Riddles](#5---displayed-riddles)
+! [Quiz Questions]()
 
- * If the player is at the end of the game then pressing enter will take then to [Play Again](#11---play-again) to allow the player to either exit or restart.
+### _5 - Correct Answer_
 
-![Saved Score Viewing](documents/readme-images/open-saved-scores.png)
+ * If the player answers the quiz question correctly, they are presented simply with the message: "Correct!"
 
- * This table will show if the user has requested viva the prompt.
+ * The players score will increase by one point each time a correct answer is guessed. The score will be displayed at the every end.
 
- * It shows the name, score and the preceentage of each player that has saved scores.
+! [Correct Answer]()
 
- * If the player has chosen to save there score at the end of the game, there is another prompt to allow then to view the scores.
+### _6 - Incorrect Answer_
 
- * At the bottom of there table there is a message saying 'Press Enter To Contiune'.
+ * If the player answers the quiz question incorrectly, they are presented with the message: "Incorrect. The correct answer is {correct_answer}."
 
- * If the player is at the begining of the game this will take the player to the [Riddles](#5---displayed-riddles) to begin playing.
+ * The players score will not increase, as only correct answers are incremented. Final score is displayed after the 13th question is answered.
 
- * If the player is at the end of the game then this will take the player to [Play Again](#11---play-again) to allow the player to either exit or restart.
+! [Incorrect Answer]()
 
-![Score Table](documents/readme-images/score-table.png)
+### _7 - Invalid Entries_
 
-### _5 - Displayed Riddles_
+ * If anything other than the digits 1-4 are entered as an answer, the player will receive this message: "Invalid input. Please enter a number between 1 and 4."
 
- * The player will be Shown a message saying 'Good Luck' before the first riddle only.
+! [Invalid Entries]()
 
-![Good Luck](documents/readme-images/good-luck.png)
+### _8 - Final Score_
 
- * Then the player will be pressented with the first riddle.
+ * After the play has answered all 13 quiz questions, their score is presented.
 
- * This shows The player What riddle there are currently on first.
+ * Only a total of correct answers are tallied and compared to the total number of questions.
 
- * Then Shows The riddle.
-
- * Then Shows The options to choose from.
-
- * Then the player is prompr to Type 'A', 'B' or 'C'.
-
- * Once the player has answered the user will be prompted with the correct output.
-
- * If the player answers correctly then ['You Answered Correctly'](#6---correct-answer) message is show with the current score.
-
- * If the player answers incorrectly then ['Sorry Wrong Answer'](#6---correct-answer) message is show with the current score.
-
- * If the player answers enters an incorrect value then th you ['Incorrect Value'](#6---correct-answer) message is show a prompt saying enter A, B or C. 
-
- * This will be the same steps untill the 20th riddle is answered.
-
-![Displayed Riddles](documents/readme-images/riddles.png)
-
-### _6 - Correct Answer_
-
- * If the player answers the riddle correctly then this 'You Answered Correctly' message will show.
-
- * The players score will increase by one point and display their currnt score below.
-
-![Correct Answer](documents/readme-images/correct-answer.png)
-
-### _7 - Incorrect Answer_
-
- * If the player answers the riddle incorrectly then this 'Sorry Wrong Answer' message will show.
-
- * The players score will not change but will display their currnt score below.
-
-![Incorrect Answer](documents/readme-images/wrong-answer.png)
-
-### _8 - Invalid Entries_
-
- * Whilst the player is answering the riddles and does not enter 'A' or 'a', 'B' or 'b', 'C' or 'c'
-
-    this incorrect value message will show and prompt the user to enter A, B or C.
-
-![Invalid Enterys](documents/readme-images/incorrect-value.png)
-
-### _9 - Final Score_
-
- * After the play has answered all the riddles this final score message will show.
-
- * The final score message will show the player their score with an accuracy percentage aswell.
-
- * IF a player get all 20 riddles correct the will be pressented with a 'CONGRATULATIONS (Players Name) YOU ARE A RIDDLE MASTER' message.
+ * If a player get all 13 answers correct they presented with a 'CONGRATULATIONS (Players Name) YOU ARE A RIDDLE MASTER' message.
 
 ![Top Score](documents/readme-images/top-score.png)
  
@@ -177,25 +122,7 @@ The game code contains functions both to score the right and wrong answers at th
 
     *(only displays when player provides a name, is shown before 'See Saved Scores'  if name is provided).
 
-### _10 - Saving Scores_
- 
- * This is option only shows whan a player has provided a name. 
-
- * if a name is not given the use will be prompted with the [See Save Scores](#4---saved-score-viewing). (See Above For Details).
-
- * If the player had given a name then they will be asked if they would like to save there score and asked to type 'Yes', 'Or Press Enter To Continue'.
-
-![Saving Scores](documents/readme-images/save-score.png)
-
- * If the user Types Yes then The 'Uploading Score" message will show first and once the proccess has finished the 'Successfully Added' message will appear.
-
- * Then the user will be prompted with the [See Save Scores](#4---saved-score-viewing). (See Above For Details).
-
-![Saved Scores](documents/readme-images/score-saved.png)
-
- * If the player presses enter then this process will be skipped and the user will be prompted with the [See Save Scores](#4---saved-score-viewing). (See Above For Details).
-
-### _11 - Play Again_
+### _9 - Play Again_
 
  * The player will be prompt with 'Play Again' message and asked to type 'Yes', 'Or Press Enter To Conintue'.
 
@@ -204,12 +131,6 @@ The game code contains functions both to score the right and wrong answers at th
  * If the plyer presses enter to continue the game will procceed to end.
 
 ![Play Again](documents/readme-images/play-again.png)
-
-### _12 - Game End_
-
- * After the player has pressed enter not to play again, this 'Thank You For Playing' message is deployed.
-
-![Game End](documents/readme-images/end.png)
 
 ## _Data Storage_
  
