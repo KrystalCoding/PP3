@@ -25,10 +25,8 @@ The game code contains functions both to score the right and wrong answers at th
     - [_7 - Invalid Entries_](#8---invalid-entries)
     - [_8 - Final Score_](#9---final-score)
     - [_9 - Play Again_](#11---play-again)
-  - [_Data Storage_](#data-storage)
   - [_Implemented Features_](#implemented-features)
   - [_Features to be Implemented_](#features-to-be-implemented)
-- [_Design_](#design)
 - [_Bugs_](#bugs)
 - [_Testing_](#testing)
 - [_Validation_](#validation)
@@ -120,50 +118,21 @@ The game code contains functions both to score the right and wrong answers at th
 
 ### _9 - Play Again_
 
- * The player will be prompt with 'Play Again' message and asked to type 'Yes', 'Or Press Enter To Conintue'.
+ * The player will be prompted with a message on how to play again.
 
- * If the player types yes the the game will loop back to the how to play screen so the player can start again.
-
- * If the plyer presses enter to continue the game will procceed to end.
-
-![Play Again](documents/readme-images/play-again.png)
-
-## _Data Storage_
- 
- * The data for this game is exchanged using google sheets
-
- * The riddles are generated from a worksheet riddles that holds all the riddles, answer options and correct answer indicater.
-
- * The player scores are saved to another worksheet scores that then is inputted back to the score table.
+! [Play Again]()
 
 ## _Implemented Features_
 
- * Has difreent colour outputs so show the different types of information shown to the player.
-
- * has a save funtion to save the players scores.
-
- * Has a function to resart the game.
-
- * Easily able to implent more riddles buy inputting them to the google sheet worksheet
+ * Organized code with quiz questions at the top, very easily altered.
   
 ## _Features to be Implemented_
 
- * Change the score table from showing all saved scores to the top 10 higest scores.
-
-# _Design_
- 
- * This flow chart shows how the game responds within the different sections.
-
- * This flow chart will Help through the testing to determine whether the game responds as it should.
-
- ![Flow Chart](documents/readme-images/flow-chart.png)
+ * I would like to store the quiz questions on an external google sheet.
 
 # _Bugs_
 
- * Through testing there are no current known bugs within the game
- 
- * Throught development there was a bug of same questions being show more than once within one game sequence
-    * which was fixed using an if statment to check if a generated item had been used already.
+ * Through testing there are no currently known bugs within the game.
 
 # _Testing_
 

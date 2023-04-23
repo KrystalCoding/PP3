@@ -67,7 +67,7 @@ questions = [
         "question": "What is the name of the chemical compound responsible for giving plants their green color?",
         "answers": ["Chlorophyll", "Carotenoid", "Anthocyanin", "Chloroform"],
         "correct_answer": "Chlorophyll"
-    }    
+    }
 ]
 
 def player_info():
@@ -110,7 +110,7 @@ def run_game():
                 print(f"{j + 1}. {line}")
         while True:
             player_answer = input("Enter your answer (1-4): ")
-            if player_answer.isdigit() and int(player_answer) in [1,2,3,4]:
+            if player_answer.isdigit() and int(player_answer) in [1, 2, 3, 4]:
                 break
             print("Invalid input. Please enter a number between 1 and 4.")
         if player_answer == str(question['answers'].index(question['correct_answer'])+1):
@@ -122,11 +122,11 @@ def run_game():
         if score == 13:
             print(f"Congratulations, {player_name}! You are a plant Master!")
     print(f"Game over. Your score is {score}/{len(questions)}.")
-    print() # Print a blank line for formatting
+    print()  # Print a blank line for formatting
     print("Click 'Run Program' or Refresh the page to play again!")
 
 
-#Get player name
+# Get player name
 player_name = player_info()
 
 # Run the game
