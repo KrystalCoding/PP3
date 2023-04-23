@@ -159,8 +159,8 @@ def run_game():
             print("Correct!")
             score += 1
         else:
-            print(f"Incorrect."
-                  " The correct answer is {question['correct_answer']}.")
+            print("Incorrect."
+                  f" The correct answer is {question['correct_answer']}.")
         print()  # Print a blank line for formatting
         if score == 13:
             print(f"Congratulations, {player_name}! You are a plant Master!")
