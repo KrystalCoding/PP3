@@ -176,73 +176,59 @@ The game code contains functions both to score the right and wrong answers at th
 
  * This game passes through the [Code Institute PEP8](https://pep8ci.herokuapp.com/) Validator with no errors.
 
-![Validation](documents/readme-images/validation.png)
+! [Validation]()
 
 # _Technologies_
 
- * Python is the main programming language to produce the game.
+ * Python is the programming language used to produce the game.
   
- * rich was imported.
-      * Table - To create the table in Saved Scores. 
-      * Box - For the outline of the table in Saved Scores. 
-      * Console - For the colour styling for the output to the console.
+ * 'random' was imported to handle the mixing up of the quiz question order.
   
- * random was imported to handle the random numbers to select the riddles at random.
+ * 'textwrap' was imported to handle breaking up of any lines longer than the CLI.
   
- * gspread was imported to handle the access to the google sheets data.
-  
- * google.oauth2.service_account import Credentials was used to handle the access to the google drive where the google sheet is stored.
-
- * [LucidChart](https://www.lucidchart.com/pages/) used to create the flow chart showing the game's functionality and flow.
-
  * [GitHub](https://www.github.com) was used to hold the game repository files.
 
- * [Gitpod](https://www.gitpod.io) was used for the coding environment.
+ * [Gitpod](https://www.gitpod.io) and [CodeAnywere](https://app.codeanywhere.com/) were used for the coding environment.
 
  * [Heroku](https://www.heroku.com) was used to deploy the game to the web.
- 
- * [NHC Debut Video](https://www.nchsoftware.com/capture/download-now.html?ns=true&kw=nch%20debut%20video&gclid=Cj0KCQjwxYOiBhC9ARIsANiEIfaBgkFY226We0Niciqf_go8kAI_hYrSRyhBh2FvxDuEqUfzJi1j0YoaAtjGEALw_wcB) Capture used to screen recored the game play for gif.
-
- * To create the gif [ezgif.com](https://www.ezgif.com) was used
 
 # _Deployment_
 
 ## _1 - Version Control_
 
- Verion controle was maintained using GIT within GitPod to push code to the GitHub repository
+ Version control was maintained using git within GitPod and CodeAnywhere to push code to the main repository.
 
- * From the Gitpod terminal use "git add ." which tells git you would like to make changes/updates to the files.
+ * From the Gitpod terminal use "git add .", which tells git you would like to make changes/updates to the files.
 
- * Then use "git commit -m " with a comment, this will commit the changes and update the files.
+ * Then use "git commit -m (plus a comment)", which commits the changes and updates the files.
 
- * Then using the "git push" command this will push the committed changes to your GitHub repository.
+ * Then use the "git push" command, which pushes the committed changes to the main repository. To go back and forth between Gitpod and CodeAnywhere workspaces, use the command "git pull" to make sure all data has been brought over before working from the new space.
 
 ## _2 - Page Deployment_
 
- * Go to Heroku and log in
+ Heroku CLI was used for this game's deployment. Directions on how to do that are as follows:
 
- * click "New" to create a new app from the dashboard
+ * After creating an account and logging in, click "New" to create a new app from the dashboard.
 
- * Choose app name and select your region, press "Create app".
+ * Choose app's unique name and select your region; press "Create app".
 
  * Go to "Settings" and navigate to Config Vars.
 
  * Add Config Vars. 
-    * This app used two 
-        * One for the credentials to allow access to the google sheets. KEY = CREDS : VALUE = CREDS.json content.
-        * Second KEY = PORT : VALUE = 8000.
+    * This app used only one:
+        * KEY = PORT : VALUE = 8000.
  
- * Add buildpacks Python and NodeJS in this order.
+ * Add buildpacks Python and NodeJS - in this order.
  
- * Now go to the Deploy tab.
+ * Now you may click the Deploy tab.
  
  * Scroll Down to Deployment Method and select GitHub.
  
  * Select repository to be deployed and connect to Heroku.
  
- * Now Scroll down to depoly : 
-    * Option 1 is selecting Automatic deploys (Will Update Automaticly when every git push to the repository).
-    * Option 2 is selecting Manual deploy (Needs to be redeployed after every change manually via Heroku deploy tab).
+ * Scroll down to deploy: 
+    * Option 1 is selecting Automatic deploys (Will Update Automatically with every "git push"). This is what I chose for this project.
+    * Option 2 is selecting Manual deploy (Needs to be manually redeployed after every change, via Heroku deploy tab).
 
  Visit the live deployment [HERE](https://plant-quiz.herokuapp.com/).
 
