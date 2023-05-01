@@ -28,7 +28,7 @@ questions = [
     {
         "question":
         ("What is the process called by which plants convert light"
-         "into energy?"),
+         " into energy?"),
         "answers":
         ["Respiration", "Transpiration", "Fertilization", "Photosynthesis"],
         "correct_answer": "Photosynthesis"
@@ -110,11 +110,15 @@ def player_info():
     Prompts the user to enter their preferred username
     and returns it as a string.
     """
-    print("Please enter your preferred username:\n")
-    player_name = input()
+    while True:
+        player_name = input("Please enter your preferred username: ")
+        if player_name:
+            break
+        print("Username can not be empty, please try again.")
     print()  # Print a blank line for formatting
     welcome(player_name)
     return player_name
+
 
 
 def welcome(player_name):
@@ -167,6 +171,8 @@ def run_game():
     print(f"Game over. Your score is {score}/{len(questions)}.")
     print()  # Print a blank line for formatting
     print("Click 'Run Program' or Refresh the page to play again!")
+
+
 
 
 # Get player name
