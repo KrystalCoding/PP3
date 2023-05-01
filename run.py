@@ -149,8 +149,12 @@ def run_game():
     score based on the user's answers. After all questions are answered,
     the user's score is displayed.
     """
-    random.shuffle(questions)  # Shuffle the questions
-    score = 0  # Initialize the score
+    # Shuffle the questions
+    random.shuffle(questions)
+    # Initialize the score
+    score = 0
+    # Clear the screen at the start of each round
+    clear_screen()  
     for i, question in enumerate(questions):
         # Wrap the question text to a maximum width of 80 characters
         wrapped_question = textwrap.wrap(question['question'], width=80)
