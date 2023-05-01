@@ -132,45 +132,25 @@ The game code contains functions both to score the right and wrong answers at th
 
 # _Bugs_
 
- * Through testing there are no currently known bugs within the game.
+ * Through testing, I was made aware that the user was allowed to make an empty entry. I fixed this by running a while loop.
+
+ * Instead of ending the quiz with instruction to the user on how to refresh the page, I inserted play_again and clear_screen functions to make a cleaner, easier, and more efficient user experience.
 
 # _Testing_
 
 | Test     | Expected      |   Outcome  | 
 | :----     |    :----   |  :---- | 
-|Run run.py| run.py loads, Welcome banner appears, player name prompt, appears| As Expected |
-|Enter Player Name and press enter | How To Play Information appear| As Expected|
-|Press enter on how to play|Loads To See Saved Scores Prompt| As Expected|
-|Type yes on To See Saved Scores Prompt and Press enter|Loads Saved Scores Table|As Expected|
-|Press enter on Saved Score Table to Continue|Loads Good Luck Banner And first Riddle|As Expected|
-|Enter C For Correct Answer|Loads Correct Answer Output and Score Output with score of 1, Loads Second Riddle|As Expected|
-|Enter B for Wrong Answer |Loads Wrong Answer Output and Score Output with score of 1, Loads Third Riddle|As Expected|
-|Enter C For Correct Answer|Loads Correct Answer Output and Score Output with score of 2, Loads fourth Riddle|As Expected|
-|Enter A for Wrong Answer |Loads Wrong Answer Output and Score Output with score of 2, Loads fith Riddle|As Expected|
-|Enter B For Correct Answer|Loads Correct Answer Output and Score Output with score of 3, Loads sixth Riddle|As Expected|
-|Enter C for Wrong Answer |LoadsWrong Answer Output and Score Output with score of 3, Loads Seventh Riddle|As Expected|
-|Enter C For Correct Answer|Loads Correct Answer Output and Score Output with score of 4, Loads 8th Riddle|As Expected|
-|Enter D For Incorrect Value|Loads Incorrect Value Output, And Enter (A, B, C)  Prompt|As Expected|
-|Press Enter With No Input|Loads Incorrect Value Output, And Enter (A, B, C)  Prompt|As Expected|
-|Randon Select Rest of Riddle Answers  untill final Riddle|Diplay Outputs According to Correct, or Wrong Answers|As Expected|
-|Enter Last Riddle Choice|Displays Correct Output Depening on selection, Loads Finall Score Output, Loads Save Score Prompt|As Expected|
-|Type yes to Save Score|Shows Uploading output, Shows Successful output, Loads See Saved Scores Prompt|As Expected|
-|Type yes on To See Saved Scores Prompt and Press enter|Loads Saved Scores Table|As Expected|
-|Press enter on Saved Score Table to Continue|Loads Play Again Prompt|As Expected|
-|Type Yes On Play Again Prompt|Loads Up How To Play Output|As Expected|
-|Press enter on how to play|Loads To See Saved Scores Prompt|As Expected|
-|Press Enter To Skip Score Table |Loads Good Luck Banner And first Riddle|As Expected|
-|Randomly Selectect Answers To all 20 Riddles|Diplay Outputs According to Correct, or Wrong Answers, Loads Save Score Prompt|As Expected|
-|Press Enter To SkipSave Score|Loads See Saved Score Prompt|As Expected|
-|Press Enter To See Saved Score Score|Loads Play Again Prompt|As Expected|
-|Press Enter To Skip Play Again Prompt|Loads Thank you for playing Output, Game ends|As Expected|
-|Load run.py Skip player Name,|Load welcome banner and Player prompt, loads how to play output|As Expected|
-|Press enter to continue, and press enter again to not load score table|Loads see saved score prompt, loads goodluck banner and first riddle|As Expected|
-|Randomly Selectect Answers To 19 Riddles|Diplay Outputs According to Correct, or Wrong Answers, Loads Save Score Prompt|As Expected|
-|Enter Last riddle|Correct ouptput shows depending in Answwer given, Final Score output shows, See Saved Scores prompt|As Expected|
-|Press Enter To Skip Save Score|Loads See Saved Score Prompt|As Expected|
-|Press Enter To Skip See Saved Score Score|Loads Play Again Prompt|As Expected|
-|Press Enter To Skip Play Again Prompt|Loads Thank you for playing Output, Game ends|As Expected|
+| Run run.py | run.py loads, username prompt appears | As Expected |
+| Press Enter with no Input | Loads Incorrect Value Output, prompts user to try again | As Expected |
+| Insert desired username and press Enter | Welcome message and quiz-begin instructions appear | As Expected |
+| Press Enter to start the quiz | Page Clear function executes and first quiz question appears | As Expected |
+| Enter answer in digits 1-4 + Enter | Loads correct/incorrect Output and provides correct answer, loads next question | As Expected |
+| Press Enter With No Input | Loads Incorrect Value Output, prompts user to enter digits 1-4 | As Expected |
+|Random Selection of Quiz Questions until all 13 have been answered |Display Outputs Questions and correct answers | As Expected |
+| Press Enter on Final Quiz guess | Displays correct Output depending on user guess, Loads Game Over message, Loads Final Score Output, Loads Try Again option | As Expected |
+| Press Enter with no input | Loads Invalid Input message, prompts the user to enter 'y' or 'n'. | As Expected |
+| Press Y on Try Again prompt |  Clears the page and runs quiz again, Starts the score back at 0, Runs through all 13 randomized questions again | As Expected |
+| Press N on Try Again Prompt | Loads final message to player, system exit command executed | As Expected |
 
 # _Validation_
 
@@ -236,7 +216,8 @@ The game code contains functions both to score the right and wrong answers at th
 
  * I used a fellow student's "Riddles" code for this README.md format inspiration: [A. Croshaw](https://github.com/A-Croshaw/Riddles/blob/main/README.md)
 
+ * Code for exiting the game or restarting was inspired by fellow student's portfolio project: [Haniibani](https://github.com/Haniibani/Project-portfolio-3/blob/main/run.py#L56)
+
  * Much of the run_game function was inspired by (and learned from) Code Institute's walkthrough project: [love_sandwiches](https://github.com/KrystalCoding/Love-Sandwiches)
 
- 
  * For Python code functionality, I borrowed advice and bits of code from: [python.org](https://www.python.org/), [w3schools](https://www.w3schools.com/python/default.asp), and [stackoverflow](https://stackoverflow.com/)
