@@ -173,6 +173,15 @@ def run_game():
     print("Click 'Run Program' or Refresh the page to play again!")
 
 
+#Ask the user if they want to play again.
+while True:
+    play_again = input(Try again? y/n)
+    if play_again in ["y", "Y"]:
+        run_game()
+    elif play_again in ["n", "N"]:
+        sys.exit()
+    else:
+        print("Y or N")       
 
 
 # Get player name
