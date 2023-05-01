@@ -1,6 +1,6 @@
 # Plant Quiz
 
-! Insert image responsiveness
+(! Insert image responsiveness)
 
 [_Click here to view live deployment_](https://plant-quiz.herokuapp.com/)
 
@@ -58,19 +58,23 @@ The game code contains functions both to score the right and wrong answers at th
 
  * The player is prompted to enter their desired username.
 
-! [Player]()
+![Player](images/username-prompt.png)
+
+ * If the User tries to press Enter without entering any content, they will receive an error message.
+
+![Incorrect Username](images/incorrect-username.png) 
 
 ### _2 - Welcome_
 
  * After the player enters their prefered username, a short welcome message is displayed.
 
-! [Welcome]()
+![Welcome](images/welcome-message.png)
 
 ### _3 - How To Play_
 
  * This prompts the player to press Enter in order to try the quiz.
 
-! [How To Play]()
+![How To Play](images/welcome-message.png)
 
 ### _4 - Quiz Questions_
 
@@ -82,7 +86,7 @@ The game code contains functions both to score the right and wrong answers at th
 
  * This loop is repeated until the 13th question is answered.
 
-! [Quiz Questions]()
+![Quiz Questions](images/quiz-question.png)
 
 ### _5 - Correct Answer_
 
@@ -90,7 +94,7 @@ The game code contains functions both to score the right and wrong answers at th
 
  * The players score will increase by one point each time a correct answer is guessed. The score will be displayed at the every end.
 
-! [Correct Answer]()
+![Correct Answer](images/correct-answer.png)
 
 ### _6 - Incorrect Answer_
 
@@ -98,13 +102,13 @@ The game code contains functions both to score the right and wrong answers at th
 
  * The players score will not increase, as only correct answers are incremented. Final score is displayed after the 13th question is answered.
 
-! [Incorrect Answer]()
+![Incorrect Answer](images/incorrect.png)
 
 ### _7 - Invalid Entries_
 
  * If anything other than the digits 1-4 are entered as an answer, the player will receive this message: "Invalid input. Please enter a number between 1 and 4."
 
-! [Invalid Entries]()
+![Invalid Entries](images/incorrect-answer.png)
 
 ### _8 - Final Score_
 
@@ -114,13 +118,22 @@ The game code contains functions both to score the right and wrong answers at th
 
  * If a player get all 13 answers correct they presented with a unique message: "Congratulations, {player_name}! You are a plant Master!"
 
-! [Top Score]()
+![Top Score](images/plant-master.png)
 
 ### _9 - Play Again_
 
  * The player will be prompted with a message on how to play again.
 
-! [Play Again]()
+![Play Again](images/game-over-score.png)
+
+ * If user presses Enter without any content, they will be prompted to try again.
+
+![Try Again](images/incorrect-try-again.png)
+
+ * If the User presses 'Y', the game will be restarted.
+ * If the User presses 'N', they will receive a closing message and the game ends.
+
+![Kill Screen](images/kill-screen.png)
 
 ## _Implemented Features_
 
