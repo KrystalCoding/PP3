@@ -122,7 +122,7 @@ The game code contains functions both to score the right and wrong answers at th
 
 ### _9 - Play Again_
 
- * The player will be prompted with a message on how to play again.
+ * The player will be prompted with a message asking if they would like to play again.
 
 ![Play Again](images/game-over-score.png)
 
@@ -137,7 +137,7 @@ The game code contains functions both to score the right and wrong answers at th
 
 ## _Implemented Features_
 
- * Organized code with quiz questions at the top, very easily altered.
+ * Organized code with quiz questions at the top, very easily altered or updated as needed.
   
 ## _Features to be Implemented_
 
