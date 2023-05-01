@@ -116,6 +116,7 @@ def clear_screen():
     else:
         os.system('clear')
 
+
 def player_info():
     """
     Prompts the user to enter their preferred username
@@ -126,7 +127,8 @@ def player_info():
         if player_name:
             break
         print("Username can not be empty, please try again.")
-    print()  # Print a blank line for formatting
+    # Print a blank line for formatting
+    print()
     welcome(player_name)
     return player_name
 
@@ -154,7 +156,7 @@ def run_game():
     # Initialize the score
     score = 0
     # Clear the screen at the start of each round
-    clear_screen()  
+    clear_screen()
     for i, question in enumerate(questions):
         # Wrap the question text to a maximum width of 80 characters
         wrapped_question = textwrap.wrap(question['question'], width=80)

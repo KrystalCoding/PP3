@@ -148,6 +148,7 @@ The game code contains functions both to score the right and wrong answers at th
 | Press Enter With No Input | Loads Incorrect Value Output, prompts user to enter digits 1-4 | As Expected |
 |Random Selection of Quiz Questions until all 13 have been answered |Display Outputs Questions and correct answers | As Expected |
 | Press Enter on Final Quiz guess | Displays correct Output depending on user guess, Loads Game Over message, Loads Final Score Output, Loads Try Again option | As Expected |
+| User gets perfect score | A congratulations message appears along with the final 13/13 score | As Expected |
 | Press Enter with no input | Loads Invalid Input message, prompts the user to enter 'y' or 'n'. | As Expected |
 | Press Y on Try Again prompt |  Clears the page and runs quiz again, Starts the score back at 0, Runs through all 13 randomized questions again | As Expected |
 | Press N on Try Again Prompt | Loads final message to player, system exit command executed | As Expected |
@@ -156,7 +157,7 @@ The game code contains functions both to score the right and wrong answers at th
 
  * This game passes through the [Code Institute PEP8](https://pep8ci.herokuapp.com/) Validator with no errors.
 
-! [Validation]()
+![Validation]()
 
 # _Technologies_
 
