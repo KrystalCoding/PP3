@@ -1,6 +1,7 @@
 import random
 import textwrap
 import sys
+import os
 
 # The list of questions and answers in the quiz game
 questions = [
@@ -105,6 +106,15 @@ questions = [
     }
 ]
 
+
+def clear_screen():
+    """
+    Clears the screen based on the user's operating system.
+    """
+    if sys.platform.startswith('win'):
+        os.system('cls')
+    else:
+        os.system('clear')
 
 def player_info():
     """
