@@ -121,7 +121,6 @@ def player_info():
     return player_name
 
 
-
 def welcome(player_name):
     """
     Prints a welcome message to the user.
@@ -166,23 +165,22 @@ def run_game():
         else:
             print("Incorrect."
                   f" The correct answer is {question['correct_answer']}.")
-        print()  # Print a blank line for formatting
+        # Print a blank line for formatting
+        print()
         if score == 13:
             print(f"Congratulations, {player_name}! You are a plant Master!")
     print(f"Game over. Your score is {score}/{len(questions)}.")
-    print()  # Print a blank line for formatting
-    print("Click 'Run Program' or Refresh the page to play again!")
-
-
-#Ask the user if they want to play again.
-while True:
-    play_again = input("Try again? y/n ")
-    if play_again in ["y", "Y"]:
-        run_game()
-    elif play_again in ["n", "N"]:
-        sys.exit()
-    else:
-        print("Y or N")       
+    # Print a blank line for formatting
+    print()
+    # Ask the user if they want to play again.
+    while True:
+        play_again = input("Try again? (y/n): ")
+        if play_again.lower() == "y":
+            run_game()
+        elif play_again.lower() == "n":
+            print("Thanks for playing!")
+            sys.exit()
+        print("Invalid input. Please enter 'y' or 'n'.")
 
 
 # Get player name
