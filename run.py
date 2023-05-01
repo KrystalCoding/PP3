@@ -1,5 +1,6 @@
 import random
 import textwrap
+import sys
 
 # The list of questions and answers in the quiz game
 questions = [
@@ -175,7 +176,7 @@ def run_game():
 
 #Ask the user if they want to play again.
 while True:
-    play_again = input(Try again? y/n)
+    play_again = input("Try again? y/n ")
     if play_again in ["y", "Y"]:
         run_game()
     elif play_again in ["n", "N"]:
