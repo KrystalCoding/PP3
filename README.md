@@ -1,7 +1,5 @@
 # Plant Quiz
 
-(! Insert image responsiveness)
-
 [_Click here to view live deployment_](https://plant-quiz.herokuapp.com/)
 
 This featured low level Python game deploys to a console.
@@ -170,7 +168,7 @@ The game code contains functions both to score the right and wrong answers at th
 
  * This game passes through the [Code Institute PEP8](https://pep8ci.herokuapp.com/) Validator with no errors.
 
-![Validation]()
+![Validation](images/validation.png)
 
 # _Technologies_
 
